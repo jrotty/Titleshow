@@ -80,7 +80,6 @@ $tixing = Typecho_Widget::widget('Widget_Options')->plugin('Titleshow')->tixing;
 if(empty($tixing)){$tixing='请输入密码访问';} //如果未设置则设置默认文字
 /** 如果访问权限被禁止【就是如果需要密码】 */
 if ($v['hidden']){
-$obj->request->markdown=0;
 $v['text'] = '
 !!!
 <form class="protected" action="' . Typecho_Widget::widget('Widget_Security')->getTokenUrl($v['permalink']). '" method="post">'.'<p class="word">'.$tixing.'</p>'.'<p><input type="password" class="text" name="protectPassword" /><input type="hidden" name="protectCID" value="' . $v['cid'] . '" />&nbsp;<input type="submit" class="submit" value="' . _t('提交') . '" /></p>'.'</form>
