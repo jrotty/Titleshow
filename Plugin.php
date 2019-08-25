@@ -5,7 +5,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
  * 
  * @package Titleshow
  * @author 泽泽
- * @version 1.1.1
+ * @version 1.1.2
  * @link http://qqdie.com
  */
 class Titleshow_Plugin implements Typecho_Plugin_Interface
@@ -78,6 +78,7 @@ class Titleshow_Plugin implements Typecho_Plugin_Interface
 public static function tshow($v, $obj) {
 $tixing = Typecho_Widget::widget('Widget_Options')->plugin('Titleshow')->tixing;//获取设置参数
 if(empty($tixing)){$tixing='请输入密码访问';} //如果未设置则设置默认文字
+$v['titleshow'] = false;
 /** 如果访问权限被禁止【就是如果需要密码】 */
 if ($v['hidden']){
 $v['text'] = '
@@ -87,6 +88,8 @@ $v['text'] = '
 ';
 /** 跳过系统默认 */
 $v['hidden'] = false;
+/** 用于模板判断插件 */
+$v['titleshow'] = true;
 }
 /** 返回数据 */
 return $v; 
