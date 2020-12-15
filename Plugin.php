@@ -6,7 +6,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
  * @package Titleshow
  * @author 泽泽
  * @version 1.1.2
- * @link http://qqdie.com
+ * @link https://github.com/jrotty/Titleshow
  */
 class Titleshow_Plugin implements Typecho_Plugin_Interface
 {
