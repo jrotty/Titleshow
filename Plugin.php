@@ -12,7 +12,7 @@ use Typecho\Db;
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 /**
- * 让文章显示标题
+ * 让加密文章显示标题
  * 
  * @package Titleshow
  * @author 泽泽
